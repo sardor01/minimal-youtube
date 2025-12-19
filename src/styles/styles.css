@@ -162,8 +162,8 @@ html.minimal-youtube #avatar-btn {
 }
 
 html.minimal-youtube #primary {
-  max-width: 900px !important;
-  width: 80% !important;
+  max-width: 1280px !important;
+  width: 85% !important;
 }
 
 html.minimal-youtube .ytp-chrome-bottom {
