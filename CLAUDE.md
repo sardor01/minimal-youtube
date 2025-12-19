@@ -50,7 +50,15 @@ Run `node scripts/build.cjs` to create a `dist/` folder with flattened structure
 Load the **dist folder** for production testing:
 `chrome://extensions` → Load unpacked → Select `dist/`
 
+## Commands
+
+```bash
+npm run build       # Build dist/ for distribution
+npm run lint        # Run ESLint
+npm run format      # Check Prettier formatting
+```
+
 ## Code Style
 
-- 2-space indentation (see .prettierrc.json)
+- 2-space indentation (see .prettierrc.js)
 - Tab-specific state managed via background script messaging

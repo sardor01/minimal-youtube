@@ -1,35 +1,8 @@
 /* Video watch page styles only */
 
-html.minimal-youtube #columns {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-html.minimal-youtube #columns #secondary {
+/* Hide secondary column only when it has no live chat or playlist */
+html.minimal-youtube #columns #secondary:not(:has(ytd-live-chat-frame)):not(:has(ytd-playlist-panel-video-renderer)) {
   display: none;
-}
-
-/* Show playlist panel when watching a video from a playlist */
-html.minimal-youtube #columns #secondary #secondary-inner > * {
-  display: none;
-}
-
-html.minimal-youtube #columns #secondary #secondary-inner > #playlist {
-  display: block;
-}
-
-html.minimal-youtube #columns #secondary:has(ytd-playlist-panel-video-renderer) {
-  display: flex;
-}
-
-html.minimal-youtube #columns.ytd-watch-flexy:has(ytd-playlist-panel-video-renderer) {
-  align-items: flex-start;
-}
-
-html.minimal-youtube #columns #primary {
-  max-width: fit-content;
 }
 
 /* Hide distracting elements */
@@ -69,34 +42,10 @@ html.minimal-youtube #avatar-btn {
   display: flex !important;
 }
 
-/* Video player sizing */
-html.minimal-youtube #primary {
-  max-width: 1280px !important;
-  width: 85% !important;
-}
-
-html.minimal-youtube .ytp-chrome-bottom {
-  width: calc(98%) !important;
-}
-
 html.minimal-youtube ytd-app[mini-guide-visible] ytd-page-manager.ytd-app {
   margin-left: 0 !important;
 }
 
-html.minimal-youtube ytd-watch-flexy:not([theater]):not([fullscreen]) .html5-video-container,
-html.minimal-youtube ytd-watch-flexy:not([theater]):not([fullscreen]) video {
-  width: 100% !important;
-  height: 100% !important;
-  left: 0 !important;
-}
-
 html.minimal-youtube ytd-playlist-sidebar-renderer {
   left: 0 !important;
-}
-
-/* Hide live chat in theater/fullscreen mode */
-html.minimal-youtube ytd-watch-flexy[theater] #chat,
-html.minimal-youtube ytd-watch-flexy[fullscreen] #chat,
-html.minimal-youtube ytd-live-chat-frame {
-  display: none !important;
 }
