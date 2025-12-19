@@ -1,0 +1,23 @@
+{
+  "name": "minimal-youtube",
+  "private": true,
+  "description": "A Chrome extension that replaces the YouTube UI with a minimal design containing no recommendations, shorts, or distractions.",
+  "type": "module",
+  "author": "Ephraim Atta-Duncan",
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write .",
+    "lf": "npm run lint:fix && npm run format:fix"
+  },
+  "devDependencies": {
+    "@sarast/eslint-config": "5.5.1",
+    "@sarast/prettier-config": "1.2.1",
+    "@types/chrome": "0.1.32",
+    "eslint": "9.39.2",
+    "globals": "16.5.0",
+    "prettier": "3.7.4"
+  }
+}
