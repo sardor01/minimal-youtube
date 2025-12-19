@@ -16,13 +16,8 @@ chrome.runtime.sendMessage({ type: 'getStateForCurrentTab' }, (response) => {
 chrome.runtime.onMessage.addListener((message) => {
   if (message.type === 'stateChanged') {
     isEnabled = message.enabled;
-    if (isEnabled) {
-      applyMinimalMode();
-    } else {
-      removeMinimalYoutubeClassFromHtml();
-      // Reload to restore original YouTube UI
-      window.location.reload();
-    }
+    // Reload to apply/remove minimal mode cleanly
+    window.location.reload();
   }
 });
 

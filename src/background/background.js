@@ -36,10 +36,14 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     setTabState(tabId, message.enabled);
 
     // Notify the content script in that tab
-    chrome.tabs.sendMessage(tabId, {
-      type: 'stateChanged',
-      enabled: message.enabled,
-    });
+    chrome.tabs
+      .sendMessage(tabId, {
+        type: 'stateChanged',
+        enabled: message.enabled,
+      })
+      .catch(() => {
+        // Content script may not be loaded yet - ignore
+      });
 
     sendResponse({ success: true });
     return true;

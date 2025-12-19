@@ -46,8 +46,8 @@ for (const [src, dest] of copies) {
   const srcPath = path.join(ROOT, src);
   const destPath = path.join(DIST, dest);
   if (fs.existsSync(srcPath)) {
-    // Remove TypeScript reference directive from content.js
-    if (dest === 'content.js') {
+    // Remove TypeScript reference directive from content.js and background.js
+    if (dest === 'content.js' || dest === 'background.js') {
       let content = fs.readFileSync(srcPath, 'utf8');
       content = content.replace(/^\/\/\/ <reference types="chrome" \/>\n{0,2}/, '');
       fs.writeFileSync(destPath, content);

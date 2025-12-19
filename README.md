@@ -3,33 +3,6 @@
   <h1>Minimal YouTube</h1>
 </div>
 
-Distraction-free YouTube video watching.
-
-<p align="center">
-  <a
-    rel="noreferrer noopener"
-    href="https://chrome.google.com/webstore/detail/minimal-youtube/imnffafnaoooaedkhappfhomnnpigogk"
-  >
-    <img
-      alt="Chrome Web Store"
-      src="https://img.shields.io/badge/Chrome-141e24.svg?&style=for-the-badge&logo=google-chrome&logoColor=white"
-    />
-  </a>
-</p>
-
-<p align="center">
-  <img src="assets/screenshot-chrome.png" width="1080" alt="Minimal Youtube on Gooogle Chrome">
-</p>
-
-## Installation
-
-- **[Download](https://github.com/dephraiim/minimal-youtube/releases/download/v1.0.1/minimal_youtube-1.0.1.zip)** the zip from the Github Releases or **Fork** this repo, then **clone your forked repo locally**.
-- **Open [the extensions page](chrome://extensions)** in Chrome: `chrome://extensions`.
-- If you did not do it already, **toggle the "developer mode"**. This is usually a toggle button at the top right of the extensions page.
-- Click the button **_load unpacked extension_**.
-- In the window that pops up, **select the folder that contains this minimal extension**, then **click _ok_**.
-- **Done!** A new extension called _Minimal Youtube_ should have appeared in the list.
-
-### Related
-
-[Minimal Youtube](https://github.com/0kzh/minimal-youtube/) for [Arc Browser](https://arc.net)
+<div align="center">
+  Distraction-free YouTube Video Watching
+</div>
