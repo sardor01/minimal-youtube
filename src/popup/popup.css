@@ -74,3 +74,11 @@ input:checked + .slider:before {
   opacity: 0.5;
   cursor: default;
 }
+
+.tab-hint {
+  font-size: 10px;
+  color: #666;
+  margin: 0;
+  margin-top: -5px;
+  margin-bottom: 12px;
+}

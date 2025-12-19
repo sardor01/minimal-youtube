@@ -1,97 +1,4 @@
-/* this will get overwritten on load */
-body {
-  display: none;
-}
-
-html.minimal-youtube,
-html.minimal-youtube body {
-  height: 100vh;
-}
-
-html.minimal-youtube .home-container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-html.minimal-youtube .search-input {
-  padding: 8px;
-  min-width: 250px;
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-}
-
-html.minimal-youtube .search-btn {
-  border: none;
-  height: 40px;
-  cursor: pointer;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  padding: 0 16px;
-  transition: background 100ms ease-in-out;
-}
-
-html.minimal-youtube .search-icon-container {
-  height: 24px;
-  width: 24px;
-}
-
-@media (prefers-color-scheme: dark) {
-  html.minimal-youtube .logo {
-    color: white;
-    fill: white;
-  }
-
-  html.minimal-youtube .search-input {
-    border: 1px solid rgb(48, 48, 48) !important;
-    background: rgb(18, 18, 18) !important;
-    color: white;
-  }
-
-  html.minimal-youtube .search-btn {
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  html.minimal-youtube .search-icon-container {
-    color: white;
-    fill: white;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  html.minimal-youtube .search-input {
-    border: 1px solid rgb(204, 204, 204);
-  }
-
-  html.minimal-youtube .search-btn {
-    background: rgb(248, 248, 248);
-    border: 1px solid rgb(211, 211, 211);
-    border-left: none;
-  }
-
-  html.minimal-youtube .search-btn:hover {
-    background: rgb(240, 240, 240);
-    border: 1px solid rgb(198, 198, 198);
-    border-left: none;
-  }
-}
-
-html.minimal-youtube .logo {
-  width: 200px;
-}
-
-html.minimal-youtube .search-input:focus {
-  outline: none;
-  border: 1px solid rgb(28, 98, 185);
-}
-
-html.minimal-youtube .search-group {
-  height: 40px;
-  display: flex;
-}
+/* Video watch page styles only */
 
 html.minimal-youtube #columns {
   width: 100%;
@@ -104,7 +11,7 @@ html.minimal-youtube #columns #secondary {
   display: none;
 }
 
-/* code to show playlist panel when it is a video from a playlist */
+/* Show playlist panel when watching a video from a playlist */
 html.minimal-youtube #columns #secondary #secondary-inner > * {
   display: none;
 }
@@ -125,6 +32,7 @@ html.minimal-youtube #columns #primary {
   max-width: fit-content;
 }
 
+/* Hide distracting elements */
 html.minimal-youtube #top-level-buttons-computed,
 html.minimal-youtube #voice-search-button,
 html.minimal-youtube ytd-mini-guide-renderer,
@@ -161,6 +69,7 @@ html.minimal-youtube #avatar-btn {
   display: flex !important;
 }
 
+/* Video player sizing */
 html.minimal-youtube #primary {
   max-width: 1280px !important;
   width: 85% !important;
@@ -185,19 +94,9 @@ html.minimal-youtube ytd-playlist-sidebar-renderer {
   left: 0 !important;
 }
 
-html.minimal-youtube ytd-reel-shelf-renderer {
-  display: none;
-}
-
-html.minimal-youtube .left-arrow .right-arrow {
-  display: block;
-}
-
-ytd-app[guide-persistent-and-visible] ytd-page-manager.ytd-app {
-  margin-left: 0 !important;
-}
-
-#page-manager > ytd-browse {
-  width: 50% !important;
-  margin: 0 auto !important;
+/* Hide live chat in theater/fullscreen mode */
+html.minimal-youtube ytd-watch-flexy[theater] #chat,
+html.minimal-youtube ytd-watch-flexy[fullscreen] #chat,
+html.minimal-youtube ytd-live-chat-frame {
+  display: none !important;
 }

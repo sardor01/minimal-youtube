@@ -3,7 +3,7 @@
   <h1>Minimal YouTube</h1>
 </div>
 
-Minimal YouTube is an extension that replaces the YouTube UI with a minimal design containing no recommendations, shorts, or distractions.
+Distraction-free YouTube video watching.
 
 <p align="center">
   <a

@@ -37,6 +37,7 @@ const copies = [
   ['src/popup/popup.html', 'popup.html'],
   ['src/popup/popup.css', 'popup.css'],
   ['src/popup/popup.js', 'popup.js'],
+  ['src/background/background.js', 'background.js'],
   ['LICENSE', 'LICENSE'],
   ['README.md', 'README.md'],
 ];
@@ -50,6 +51,11 @@ for (const [src, dest] of copies) {
       let content = fs.readFileSync(srcPath, 'utf8');
       content = content.replace(/^\/\/\/ <reference types="chrome" \/>\n{0,2}/, '');
       fs.writeFileSync(destPath, content);
+    } else if (dest === 'popup.html') {
+      // Fix asset path for flat dist structure
+      let content = fs.readFileSync(srcPath, 'utf8');
+      content = content.replace('../../assets/', 'assets/');
+      fs.writeFileSync(destPath, content);
     } else {
       fs.copyFileSync(srcPath, destPath);
     }
@@ -61,6 +67,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'manifest.json'), 'u
 manifest.content_scripts[0].css = ['styles.css'];
 manifest.content_scripts[0].js = ['content.js'];
 manifest.action.default_popup = 'popup.html';
+manifest.background.service_worker = 'background.js';
 fs.writeFileSync(path.join(DIST, 'manifest.json'), JSON.stringify(manifest, null, 4));
 
 console.log('Build complete: dist/');

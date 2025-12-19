@@ -3,7 +3,7 @@
 
   "name": "Minimal YouTube",
   "version": "1.2.1",
-  "description": "An extension for that replaces the YouTube UI with a minimal design containing no recommendations, shorts, or distractions.",
+  "description": "Distraction-free YouTube video watching.",
   "author": "Ephraim Atta-Duncan",
 
   "icons": {
@@ -25,5 +25,9 @@
     "default_popup": "src/popup/popup.html"
   },
 
-  "permissions": ["storage"]
+  "permissions": ["storage", "tabs"],
+
+  "background": {
+    "service_worker": "src/background/background.js"
+  }
 }

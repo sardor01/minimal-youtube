@@ -8,4 +8,8 @@ export default sarast().append({
       chrome: 'readonly',
     },
   },
+  rules: {
+    'no-restricted-syntax': 'off',
+    eqeqeq: 'off',
+  },
 });

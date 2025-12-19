@@ -1,7 +1,7 @@
 {
   "name": "minimal-youtube",
   "private": true,
-  "description": "A Chrome extension that replaces the YouTube UI with a minimal design containing no recommendations, shorts, or distractions.",
+  "description": "Distraction-free YouTube video watching.",
   "type": "module",
   "author": "Ephraim Atta-Duncan",
   "scripts": {
