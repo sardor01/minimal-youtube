@@ -49,3 +49,25 @@ html.minimal-youtube ytd-app[mini-guide-visible] ytd-page-manager.ytd-app {
 html.minimal-youtube ytd-playlist-sidebar-renderer {
   left: 0 !important;
 }
+
+/* Channel videos page styles */
+
+/* Hide thumbnails on channel videos pages */
+html.minimal-youtube ytd-thumbnail,
+html.minimal-youtube ytd-playlist-thumbnail {
+  display: none !important;
+}
+
+/* Hide metadata: view count, upload date, duration */
+html.minimal-youtube #metadata-line,
+html.minimal-youtube ytd-video-meta-block,
+html.minimal-youtube .ytd-thumbnail-overlay-time-status-renderer,
+html.minimal-youtube ytd-thumbnail-overlay-time-status-renderer {
+  display: none !important;
+}
+
+/* Ensure video titles remain visible */
+html.minimal-youtube #video-title,
+html.minimal-youtube #video-title-link {
+  display: block !important;
+}

@@ -56,7 +56,7 @@ function init() {
 }
 
 function applyMinimalMode() {
-  if (isEnabled && isWatchPage()) {
+  if (isEnabled && (isWatchPage() || isChannelVideosPage())) {
     addMinimalYoutubeClassToHtml();
   } else {
     removeMinimalYoutubeClassFromHtml();
@@ -65,6 +65,12 @@ function applyMinimalMode() {
 
 function isWatchPage() {
   return window.location.pathname === '/watch';
+}
+
+function isChannelVideosPage() {
+  const pathname = window.location.pathname;
+  return pathname.includes('/videos') &&
+         (pathname.startsWith('/channel/') || pathname.startsWith('/@'));
 }
 
 function removeUnreadCountFromTitle() {
